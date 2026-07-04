@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --base-dark: #0a0a0f;
+  --accent-purple: #6d28d9;
+  --accent-purple-light: #a855f7;
+  --accent-purple-dark: #1a0b2e;
+  
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --bg-panel: rgba(26, 11, 46, 0.4);
+  --border-panel: rgba(168, 85, 247, 0.1);
+  --canvas-bg-1: #0a0a0f;
+  --canvas-bg-2: #1a0b2e;
+
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-cursive: 'Dancing Script', cursive;
+
+  --transition-smooth: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.light {
+  --base-dark: #f8fafc;
+  --accent-purple: #8b5cf6;
+  --accent-purple-light: #6d28d9;
+  --accent-purple-dark: #f3e8ff;
+  
+  --text-main: #0f172a;
+  --text-muted: #475569;
+  --bg-panel: rgba(255, 255, 255, 0.7);
+  --border-panel: rgba(139, 92, 246, 0.2);
+  --canvas-bg-1: #f8fafc;
+  --canvas-bg-2: #e2e8f0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: linear-gradient(to bottom, var(--canvas-bg-1), var(--canvas-bg-2));
+  background-attachment: fixed;
+  color: var(--text-main);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="4" fill="%23a855f7" /></svg>') 8 8, auto;
+}
+
+/* Ensure buttons use default or pointer */
+a, button, .btn {
+  cursor: pointer;
+}
+
+#root {
+  position: relative;
+  z-index: 1;
+}
+
+/* Typography utilities */
+.gradient-text {
+  background: linear-gradient(135deg, var(--accent-purple-light), var(--accent-purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+p {
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+/* Button Component Styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 9999px; /* Pill shape */
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  text-decoration: none;
+  border: 2px solid transparent;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+/* Primary Button: Gradient filled, inverts to outlined on hover */
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent-purple), var(--accent-purple-light));
+  color: white;
+  border: 2px solid transparent;
+  box-shadow: 0 4px 14px 0 rgba(109, 40, 217, 0.39);
+}
+
+.btn-primary:hover {
+  background: transparent;
+  border-color: var(--accent-purple-light);
+  color: var(--accent-purple-light);
+  box-shadow: 0 6px 20px rgba(168, 85, 247, 0.4);
+  transform: translateY(-2px) scale(1.02);
+}
+
+/* Secondary Button: Outlined, inverts to filled on hover */
+.btn-secondary {
+  background: transparent;
+  color: var(--text-main);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-secondary:hover {
+  background: linear-gradient(135deg, var(--accent-purple), var(--accent-purple-light));
+  border-color: transparent;
+  color: white;
+  box-shadow: 0 6px 20px rgba(109, 40, 217, 0.4);
+  transform: translateY(-2px) scale(1.02);
+}
+
+/* Glassmorphism utility */
+.glass-panel {
+  background: var(--bg-panel);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-panel);
+  border-radius: 1rem;
+}
+
+/* Section base */
+section {
+  padding: 6rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+}

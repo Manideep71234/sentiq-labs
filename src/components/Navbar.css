@@ -1,0 +1,114 @@
+.navbar {
+  position: fixed;
+  top: 32px; /* Below the ticker */
+  left: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 99;
+  transition: var(--transition-smooth);
+  border-bottom: 1px solid transparent;
+}
+
+.navbar.scrolled {
+  background: var(--bg-panel);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-panel);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 2rem;
+  transition: var(--transition-smooth);
+}
+
+.logo-text {
+  font-family: var(--font-cursive);
+  color: #8b5cf6; /* Deeper blue/purple tone */
+  margin: 0 0.2rem;
+}
+
+.logo-bracket {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  color: var(--text-muted);
+  font-size: 1.5rem;
+}
+
+.logo:hover {
+  text-shadow: 0 0 15px rgba(168, 85, 247, 0.5);
+  transform: scale(1.02);
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem; /* Reduced gap since they are boxes now */
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--text-main);
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: var(--transition-smooth);
+  padding: 0.5rem 1.2rem;
+  border-radius: 9999px;
+  background: transparent;
+  border: 1px solid transparent;
+}
+
+.nav-link:hover {
+  background: var(--bg-panel);
+  border-color: var(--border-panel);
+  color: var(--accent-purple-light);
+}
+
+.nav-link.active {
+  background: var(--bg-panel);
+  border-color: var(--accent-purple);
+  color: var(--text-main);
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.theme-toggle {
+  background: transparent;
+  border: none;
+  color: var(--text-main);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-smooth);
+}
+
+.theme-toggle:hover {
+  color: var(--accent-purple-light);
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  .nav-cta {
+    display: none;
+  }
+}
