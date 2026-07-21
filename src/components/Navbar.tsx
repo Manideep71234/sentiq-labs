@@ -15,11 +15,14 @@ const navLinks = [
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [theme, setTheme] = useState('dark');
+  const [theme, setTheme] = useState('light');
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
+    // Set default theme on load
+    document.documentElement.classList.add('light');
+
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };

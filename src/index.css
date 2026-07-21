@@ -21,14 +21,14 @@
 
 .light {
   --base-dark: #f8fafc;
-  --accent-purple: #8b5cf6;
-  --accent-purple-light: #6d28d9;
-  --accent-purple-dark: #f3e8ff;
+  --accent-purple: #0ea5e9;
+  --accent-purple-light: #0284c7;
+  --accent-purple-dark: #e0f2fe;
   
   --text-main: #0f172a;
   --text-muted: #475569;
   --bg-panel: rgba(255, 255, 255, 0.7);
-  --border-panel: rgba(139, 92, 246, 0.2);
+  --border-panel: rgba(14, 165, 233, 0.2);
   --canvas-bg-1: #f8fafc;
   --canvas-bg-2: #e2e8f0;
 }

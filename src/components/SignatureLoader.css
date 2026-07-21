@@ -6,7 +6,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: #030014; /* Deep dark background */
+  background-color: var(--canvas-bg-1); /* Adapts to light/dark theme */
   z-index: 99999;
   display: flex;
   justify-content: center;
