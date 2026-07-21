@@ -1,45 +1,29 @@
 
 import { Routes, Route } from 'react-router-dom';
 import CanvasBackground from './components/CanvasBackground';
-import Ticker from './components/Ticker';
 import Navbar from './components/Navbar';
-import HeroSection from './components/HeroSection';
-import SolutionsSection from './components/SolutionsSection';
-import ProcessSection from './components/ProcessSection';
-import AboutSection from './components/AboutSection';
-import TestimonialsSection from './components/TestimonialsSection';
-import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 
-const Home = () => (
-  <>
-    <HeroSection />
-    <SolutionsSection />
-    <ProcessSection />
-    <TestimonialsSection />
-    <ContactSection />
-  </>
-);
+// Pages
+import Home from './pages/Home';
+import Services from './pages/Services';
+import Solutions from './pages/Solutions';
+import About from './pages/About';
+import Contact from './pages/Contact';
 
 function App() {
   return (
     <>
       <CanvasBackground />
-      <Ticker />
       <Navbar />
       
       <main style={{ paddingTop: '100px' }}>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/solutions" element={<SolutionsSection />} />
-          <Route path="/process" element={<ProcessSection />} />
-          <Route path="/about" element={
-            <>
-              <AboutSection />
-              <TestimonialsSection />
-            </>
-          } />
-          <Route path="/contact" element={<ContactSection />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/solutions" element={<Solutions />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
 

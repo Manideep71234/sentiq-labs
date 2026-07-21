@@ -29,7 +29,6 @@
 }
 
 .solution-card:hover {
-  transform: translateY(-5px) scale(1.02);
   border-color: rgba(168, 85, 247, 0.4);
   box-shadow: 0 10px 30px rgba(109, 40, 217, 0.15);
 }

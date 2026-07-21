@@ -1,0 +1,105 @@
+.why-us-section {
+  padding: 6rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.comparison-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 4rem;
+  position: relative;
+}
+
+.comparison-card {
+  flex: 1;
+  max-width: 500px;
+  padding: 3rem;
+  border-radius: 1.5rem;
+}
+
+.them-card {
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(10, 10, 15, 0.5);
+  opacity: 0.8;
+}
+
+.us-card {
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  background: rgba(168, 85, 247, 0.05);
+  transform: scale(1.05);
+  box-shadow: 0 0 40px rgba(168, 85, 247, 0.1);
+  z-index: 2;
+}
+
+.comparison-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.us-card h3 {
+  color: var(--accent-purple-light);
+}
+
+.comparison-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.comparison-list li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.05rem;
+  color: var(--text-main);
+}
+
+.icon-them {
+  color: #ef4444;
+  flex-shrink: 0;
+}
+
+.icon-us {
+  color: #22c55e;
+  flex-shrink: 0;
+}
+
+.vs-badge {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--bg-panel);
+  padding: 1rem;
+  border-radius: 50%;
+  font-weight: 800;
+  font-size: 1.5rem;
+  border: 1px solid rgba(168, 85, 247, 0.2);
+  z-index: 3;
+}
+
+@media (max-width: 992px) {
+  .comparison-container {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  
+  .us-card {
+    transform: none;
+  }
+  
+  .vs-badge {
+    position: static;
+    transform: none;
+    margin: -1.5rem auto;
+    border-radius: 1rem;
+    padding: 0.5rem 1.5rem;
+  }
+}

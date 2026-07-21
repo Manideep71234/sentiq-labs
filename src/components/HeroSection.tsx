@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import './HeroSection.css';
 import { NavLink } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
+import AICoreModel from './AICoreModel';
+import ContactModal from './ContactModal';
 
 const quotes = [
   {
@@ -43,6 +45,7 @@ const quotes = [
 
 const HeroSection: React.FC = () => {
   const [quote, setQuote] = useState(quotes[0]);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     // Select a random quote on mount
@@ -51,36 +54,42 @@ const HeroSection: React.FC = () => {
   }, []);
 
   return (
-    <section id="home" className="hero-section">
-      <div className="hero-container">
-        <div className="hero-content">
-          <div className="pill-badge">
-            <span className="pill-dot"></span>
-            DESIGNED TO DOMINATE
+    <>
+      <section id="home" className="hero-section">
+        <div className="hero-container">
+          <div className="hero-content">
+            <div className="pill-badge">
+              <span className="pill-dot"></span>
+              DESIGNED TO DOMINATE
+            </div>
+
+            <h1 className="hero-headline">
+              {quote.pre}
+              <span className="gradient-text">{quote.highlight}</span>
+              {quote.post}
+            </h1>
+
+            <p className="hero-subheadline">
+              We engineer bespoke AI automations, voice agents, and web solutions designed for one thing: accelerating your business outcomes.
+            </p>
+
+            <div className="hero-cta-group">
+              <button className="btn btn-primary" onClick={() => setIsModalOpen(true)}>
+                Book a Free Audit
+              </button>
+              <NavLink to="/solutions" className="btn btn-secondary">
+                See Our Systems <ArrowRight size={18} className="btn-icon-right" />
+              </NavLink>
+            </div>
           </div>
 
-          <h1 className="hero-headline">
-            {quote.pre}
-            <span className="gradient-text">{quote.highlight}</span>
-            {quote.post}
-          </h1>
-
-          <p className="hero-subheadline">
-            We engineer bespoke AI automations, voice agents, and web solutions designed for one thing: accelerating your business outcomes.
-          </p>
-
-          <div className="hero-cta-group">
-            <NavLink to="/contact" className="btn btn-primary">
-              Book a Free Audit
-            </NavLink>
-            <NavLink to="/solutions" className="btn btn-secondary">
-              See Our Systems <ArrowRight size={18} className="btn-icon-right" />
-            </NavLink>
+          <div className="hero-3d-model">
+            <AICoreModel />
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+      <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+    </>
   );
 };
-
 export default HeroSection;

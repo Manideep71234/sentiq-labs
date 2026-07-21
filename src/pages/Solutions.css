@@ -1,0 +1,162 @@
+/* Solutions Page Styles */
+.solutions-page {
+  padding-bottom: 4rem;
+}
+
+.solutions-page-header {
+  text-align: center;
+  padding: 4rem 2rem 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.solutions-page-header h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.solutions-intro {
+  font-size: 1.25rem;
+  color: var(--text-muted);
+}
+
+.filter-tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0 2rem;
+  margin-bottom: 4rem;
+}
+
+.filter-btn {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-muted);
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+  background: rgba(168, 85, 247, 0.1);
+  color: var(--text-main);
+  border-color: rgba(168, 85, 247, 0.3);
+}
+
+.filter-btn.active {
+  background: var(--accent-purple);
+  color: white;
+  border-color: var(--accent-purple);
+}
+
+.solutions-grid-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.solutions-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.solution-catalog-card {
+  padding: 2rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  text-align: left;
+}
+
+.card-category-tag {
+  background: rgba(168, 85, 247, 0.15);
+  color: var(--accent-purple-light);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  align-self: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.solution-catalog-card h3 {
+  font-size: 1.25rem;
+  color: var(--text-main);
+  margin: 0 0 1rem 0;
+  line-height: 1.3;
+}
+
+.solution-catalog-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0 0 2rem 0;
+  flex-grow: 1;
+}
+
+.learn-more-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--accent-purple-light);
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: gap 0.3s ease, color 0.3s ease;
+  margin-top: auto;
+}
+
+.learn-more-link:hover {
+  gap: 0.75rem;
+  color: #fff;
+}
+
+/* Bottom CTA Band */
+.bottom-cta-band {
+  margin-top: 6rem;
+  padding: 0 2rem;
+}
+
+.bottom-cta-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  text-align: center;
+  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.bottom-cta-content h2 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.cta-band-btn {
+  padding: 1rem 2.5rem;
+}
+
+@media (max-width: 768px) {
+  .solutions-page-header h1 {
+    font-size: 2.5rem;
+  }
+  
+  .filter-tabs {
+    gap: 0.5rem;
+  }
+  
+  .filter-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.85rem;
+  }
+}

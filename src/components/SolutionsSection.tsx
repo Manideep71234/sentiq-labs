@@ -1,28 +1,23 @@
 import React from 'react';
 import './SolutionsSection.css';
-import { Mic, Workflow, LayoutTemplate, Cpu } from 'lucide-react';
+import { Mic, Workflow, LayoutTemplate } from 'lucide-react';
 import Tilt from 'react-parallax-tilt';
 
 const solutions = [
   {
     icon: <Mic size={32} />,
-    title: 'AI Voice Agents',
-    description: 'Outbound and inbound calling, lead qualification, and appointment booking handled by human-like AI.'
+    title: 'Autonomous Voice Agents',
+    description: 'Inbound & outbound calling, lead qualification, and automatic appointment booking handled by human-like AI 24/7.'
   },
   {
     icon: <Workflow size={32} />,
-    title: 'Automation Systems',
-    description: 'Intelligent workflow automation connecting forms, CRM, and follow-ups to eliminate manual tasks.'
+    title: 'Intelligent Automations',
+    description: 'Seamless CRM sync, instant lead routing, and custom integrations to eliminate manual data entry.'
   },
   {
     icon: <LayoutTemplate size={32} />,
-    title: 'Web Solutions',
-    description: 'High-converting, performance-optimized websites and landing pages built for modern businesses.'
-  },
-  {
-    icon: <Cpu size={32} />,
-    title: 'Custom AI Integrations',
-    description: 'Bespoke agents and tools tailored to your specific operational needs and existing tech stack.'
+    title: 'High-Converting Web Systems',
+    description: 'Lightning-fast, beautifully designed websites and landing pages engineered specifically to capture and convert leads.'
   }
 ];
 
@@ -30,8 +25,8 @@ const SolutionsSection: React.FC = () => {
   return (
     <section id="solutions" className="solutions-section">
       <div className="section-header">
-        <h2>What We <span className="gradient-text">Build</span></h2>
-        <p>Comprehensive systems designed to scale your operations effortlessly.</p>
+        <h2>The Systems We <span className="gradient-text">Build</span></h2>
+        <p>Three core pillars to fully automate and scale your business operations.</p>
       </div>
 
       <div className="solutions-grid">
@@ -47,15 +42,14 @@ const SolutionsSection: React.FC = () => {
             glareMaxOpacity={0.15}
             glareColor="var(--accent-purple-light)"
             glarePosition="all"
-            className="solution-tilt-wrapper"
+            className="glass-panel solution-card"
+            glareBorderRadius="1rem"
           >
-            <div className="glass-panel solution-card">
-              <div className="solution-icon">
-                {solution.icon}
-              </div>
-              <h3>{solution.title}</h3>
-              <p>{solution.description}</p>
+            <div className="solution-icon">
+              {solution.icon}
             </div>
+            <h3>{solution.title}</h3>
+            <p>{solution.description}</p>
           </Tilt>
         ))}
       </div>
