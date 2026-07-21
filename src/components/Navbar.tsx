@@ -7,6 +7,7 @@ import './Navbar.css';
 const navLinks = [
   { name: 'Home', path: '/' },
   { name: 'Services', path: '/services' },
+  { name: 'AI Voice Agents', path: '/ai-voice' },
   { name: 'Solutions', path: '/solutions' },
   { name: 'About', path: '/about' },
   { name: 'Contact', path: '/contact' },

@@ -1,0 +1,10 @@
+.ai-voice-page {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  padding-bottom: 2rem;
+}
+
+.voice-contact-wrapper {
+  margin-top: 2rem;
+}
