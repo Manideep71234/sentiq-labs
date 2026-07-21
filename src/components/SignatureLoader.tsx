@@ -21,8 +21,8 @@ const SignatureLoader: React.FC = () => {
         <svg viewBox="0 0 800 200" className="signature-svg">
           <defs>
             <linearGradient id="signatureGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="#8b5cf6" />
-              <stop offset="100%" stopColor="#d946ef" />
+              <stop offset="0%" stopColor="#0ea5e9" />
+              <stop offset="100%" stopColor="#38bdf8" />
             </linearGradient>
           </defs>
           <text 
