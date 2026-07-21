@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import CanvasBackground from './components/CanvasBackground';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import SignatureLoader from './components/SignatureLoader';
 
 // Pages
 import Home from './pages/Home';
@@ -15,6 +16,7 @@ import Contact from './pages/Contact';
 function App() {
   return (
     <>
+      <SignatureLoader />
       <CanvasBackground />
       <Navbar />
       

@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+.signature-loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #030014; /* Deep dark background */
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeOutOverlay 0.8s ease-in-out 2.7s forwards;
+}
+
+.signature-container {
+  width: 90%;
+  max-width: 800px;
+}
+
+.signature-svg {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 0 20px rgba(139, 92, 246, 0.4));
+}
+
+.signature-text {
+  font-family: 'Great Vibes', cursive;
+  font-size: 140px;
+  fill: transparent;
+  stroke: url(#signatureGradient);
+  stroke-width: 2.5px;
+  stroke-dasharray: 3000;
+  stroke-dashoffset: 3000;
+  animation: 
+    drawText 2.5s cubic-bezier(0.25, 1, 0.5, 1) forwards, 
+    fillText 0.5s ease-in forwards 1.8s;
+}
+
+@keyframes drawText {
+  0% {
+    stroke-dashoffset: 3000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fillText {
+  0% {
+    fill: transparent;
+    stroke-width: 2.5px;
+  }
+  100% {
+    fill: url(#signatureGradient);
+    stroke-width: 0;
+  }
+}
+
+@keyframes fadeOutOverlay {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@media (max-width: 768px) {
+  .signature-text {
+    font-size: 100px;
+  }
+}
