@@ -31,7 +31,7 @@
 
 .footer-brand p {
   margin-top: 1rem;
-  max-width: 300px;
+  white-space: nowrap;
 }
 
 .footer-links {

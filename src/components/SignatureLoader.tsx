@@ -35,6 +35,9 @@ const SignatureLoader: React.FC = () => {
             Sentiq Labs
           </text>
         </svg>
+        <div className="loading-line-container">
+          <div className="loading-line"></div>
+        </div>
       </div>
     </div>
   );
