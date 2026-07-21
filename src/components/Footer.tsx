@@ -18,13 +18,13 @@ const Footer: React.FC = () => {
               <span className="logo-text">Sentiq Labs</span>
               <span className="logo-bracket">/&gt;</span>
             </NavLink>
-            <p className="footer-tagline">Systems that outperform.</p>
+            <p className="footer-tagline">Systems that are Designed to Dominate.</p>
             <div className="social-links">
               <a href="#" aria-label="Website"><Globe size={20} /></a>
               <a href="#" aria-label="Contact"><MessageSquare size={20} /></a>
             </div>
           </div>
-          
+
           <div className="footer-links nav-col">
             <h4>Navigation</h4>
             <NavLink to="/">Home</NavLink>
@@ -34,7 +34,7 @@ const Footer: React.FC = () => {
             <NavLink to="/about">About</NavLink>
             <NavLink to="/contact">Contact</NavLink>
           </div>
-          
+
           <div className="footer-socials cta-col">
             <h4>Get Started</h4>
             <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', marginBottom: '1rem' }}>
@@ -45,7 +45,7 @@ const Footer: React.FC = () => {
             </button>
           </div>
         </div>
-        
+
         <div className="footer-bottom" style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1rem' }}>
           <p>&copy; {new Date().getFullYear()} Sentiq Labs. All rights reserved.</p>
           <p className="footer-category" style={{ color: 'var(--text-muted)' }}>AI Automation Agency &middot; {new Date().getFullYear()}</p>
