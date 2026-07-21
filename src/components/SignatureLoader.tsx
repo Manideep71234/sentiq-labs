@@ -5,10 +5,10 @@ const SignatureLoader: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
-    // Hide the loader after the animation completes (3.5 seconds total)
+    // Hide the loader after the animation completes (4.8 seconds total)
     const timer = setTimeout(() => {
       setIsVisible(false);
-    }, 3500);
+    }, 4800);
 
     return () => clearTimeout(timer);
   }, []);
