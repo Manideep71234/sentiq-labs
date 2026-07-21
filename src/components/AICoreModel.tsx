@@ -16,8 +16,8 @@ const ChatBubble = ({ position, delay, scale = 1, flipped = false }: { position:
     <group ref={ref} position={position} scale={scale}>
       <RoundedBox args={[1.2, 0.8, 0.2]} radius={0.15} smoothness={4}>
         <meshPhysicalMaterial 
-          color="#3b0764" 
-          emissive="#6d28d9"
+          color="#082f49" 
+          emissive="#0284c7"
           emissiveIntensity={0.5}
           transparent
           opacity={0.85}
@@ -29,8 +29,8 @@ const ChatBubble = ({ position, delay, scale = 1, flipped = false }: { position:
       <mesh position={[flipped ? 0.4 : -0.4, -0.35, 0]} rotation={[0, 0, Math.PI / 4]}>
         <boxGeometry args={[0.3, 0.3, 0.15]} />
         <meshPhysicalMaterial 
-          color="#3b0764" 
-          emissive="#6d28d9"
+          color="#082f49" 
+          emissive="#0284c7"
           emissiveIntensity={0.5}
           transparent
           opacity={0.85}
@@ -40,13 +40,13 @@ const ChatBubble = ({ position, delay, scale = 1, flipped = false }: { position:
       {/* 3 little dots inside */}
       <group position={[0, 0, 0.11]}>
         <Sphere args={[0.08, 16, 16]} position={[-0.3, 0, 0]}>
-          <meshBasicMaterial color="#d8b4fe" />
+          <meshBasicMaterial color="#38bdf8" />
         </Sphere>
         <Sphere args={[0.08, 16, 16]} position={[0, 0, 0]}>
-          <meshBasicMaterial color="#d8b4fe" />
+          <meshBasicMaterial color="#38bdf8" />
         </Sphere>
         <Sphere args={[0.08, 16, 16]} position={[0.3, 0, 0]}>
-          <meshBasicMaterial color="#d8b4fe" />
+          <meshBasicMaterial color="#38bdf8" />
         </Sphere>
       </group>
     </group>
@@ -92,7 +92,7 @@ const SmartPhone = () => {
       <RoundedBox args={[1.65, 3.45, 0.1]} radius={0.15} smoothness={4} position={[0, 0, 0.06]}>
         <meshPhysicalMaterial 
           color="#000000" 
-          emissive="#3b0764"
+          emissive="#082f49"
           emissiveIntensity={0.6}
           roughness={0.1}
           metalness={0.9}
@@ -103,10 +103,10 @@ const SmartPhone = () => {
       <group position={[0, 0.6, 0.12]}>
         <mesh>
           <torusGeometry args={[0.35, 0.03, 16, 32]} />
-          <meshBasicMaterial color="#c084fc" />
+          <meshBasicMaterial color="#38bdf8" />
         </mesh>
         <Sphere args={[0.15, 16, 16]}>
-          <meshBasicMaterial color="#e9d5ff" />
+          <meshBasicMaterial color="#bae6fd" />
         </Sphere>
       </group>
       
@@ -115,7 +115,7 @@ const SmartPhone = () => {
         {waveHeights.map((_, i) => (
           <mesh key={i} position={[(i - 4) * 0.15, 0, 0]}>
             <boxGeometry args={[0.08, 1, 0.02]} />
-            <meshBasicMaterial color="#d8b4fe" />
+            <meshBasicMaterial color="#38bdf8" />
           </mesh>
         ))}
       </group>
@@ -136,9 +136,9 @@ const AICoreModel: React.FC = () => {
         <directionalLight position={[10, 10, 10]} intensity={1.5} />
         
         {/* Glowing lights for the scene */}
-        <pointLight position={[0, 0, 0]} intensity={3} color="#e9d5ff" distance={6} />
-        <pointLight position={[-3, 2, 2]} intensity={2} color="#a855f7" distance={8} />
-        <pointLight position={[3, -2, 2]} intensity={2} color="#c084fc" distance={8} />
+        <pointLight position={[0, 0, 0]} intensity={3} color="#bae6fd" distance={6} />
+        <pointLight position={[-3, 2, 2]} intensity={2} color="#0ea5e9" distance={8} />
+        <pointLight position={[3, -2, 2]} intensity={2} color="#38bdf8" distance={8} />
 
         <Float
           speed={1.5}

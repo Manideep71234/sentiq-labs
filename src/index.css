@@ -1,17 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --base-dark: #0a0a0f;
-  --accent-purple: #6d28d9;
-  --accent-purple-light: #a855f7;
-  --accent-purple-dark: #1a0b2e;
+  --base-dark: #020617;
+  --accent-purple: #0ea5e9; /* Sky Blue 500 */
+  --accent-purple-light: #38bdf8; /* Sky Blue 400 */
+  --accent-purple-dark: #0c4a6e; /* Sky Blue 900 */
   
   --text-main: #f8fafc;
   --text-muted: #94a3b8;
-  --bg-panel: rgba(26, 11, 46, 0.4);
-  --border-panel: rgba(168, 85, 247, 0.1);
-  --canvas-bg-1: #0a0a0f;
-  --canvas-bg-2: #1a0b2e;
+  --bg-panel: rgba(12, 74, 110, 0.2);
+  --border-panel: rgba(56, 189, 248, 0.15);
+  --canvas-bg-1: #020617;
+  --canvas-bg-2: #0f172a;
 
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
   --font-cursive: 'Dancing Script', cursive;
@@ -48,7 +48,7 @@ body {
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="4" fill="%23a855f7" /></svg>') 8 8, auto;
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="4" fill="%230ea5e9" /></svg>') 8 8, auto;
 }
 
 /* Ensure buttons use default or pointer */
@@ -104,14 +104,14 @@ p {
   background: linear-gradient(135deg, var(--accent-purple), var(--accent-purple-light));
   color: white;
   border: 2px solid transparent;
-  box-shadow: 0 4px 14px 0 rgba(109, 40, 217, 0.39);
+  box-shadow: 0 4px 14px 0 rgba(14, 165, 233, 0.39);
 }
 
 .btn-primary:hover {
   background: transparent;
   border-color: var(--accent-purple-light);
   color: var(--accent-purple-light);
-  box-shadow: 0 6px 20px rgba(168, 85, 247, 0.4);
+  box-shadow: 0 6px 20px rgba(56, 189, 248, 0.4);
   transform: translateY(-2px) scale(1.02);
 }
 
@@ -126,7 +126,7 @@ p {
   background: linear-gradient(135deg, var(--accent-purple), var(--accent-purple-light));
   border-color: transparent;
   color: white;
-  box-shadow: 0 6px 20px rgba(109, 40, 217, 0.4);
+  box-shadow: 0 6px 20px rgba(14, 165, 233, 0.4);
   transform: translateY(-2px) scale(1.02);
 }
 
