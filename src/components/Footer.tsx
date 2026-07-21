@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
             <h4>Navigation</h4>
             <NavLink to="/">Home</NavLink>
             <NavLink to="/services">Services</NavLink>
-            <NavLink to="/ai-voice-agents">AI Voice Agents</NavLink>
+            <NavLink to="/ai-voice" onClick={() => window.scrollTo(0, 0)}>AI Voice Agents</NavLink>
             <NavLink to="/solutions">Solutions</NavLink>
             <NavLink to="/about">About</NavLink>
             <NavLink to="/contact">Contact</NavLink>

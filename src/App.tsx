@@ -1,5 +1,5 @@
-
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 import CanvasBackground from './components/CanvasBackground';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -13,9 +13,20 @@ import Solutions from './pages/Solutions';
 import About from './pages/About';
 import Contact from './pages/Contact';
 
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+};
+
 function App() {
   return (
     <>
+      <ScrollToTop />
       <SignatureLoader />
       <CanvasBackground />
       <Navbar />
